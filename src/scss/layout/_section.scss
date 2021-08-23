@@ -1,0 +1,153 @@
+// Imports
+@import "../imports/functions";
+
+/******** START: Section ********/
+.section {
+  padding: 1.25rem 0;
+  position: relative;
+  
+  &-md {
+    padding: 1.5rem 0;
+    position: relative;
+    
+    @include media-breakpoint-up(md) {
+      // START: Tablet size
+      padding: 1.75rem 0;
+      // END: Tablet size
+    }
+    
+    @include media-breakpoint-up(lg) {
+      // START: Desktop size
+      padding: 2.5rem 0;
+      // END: Desktop size
+    }
+  }
+  
+  &-lg {
+    padding: 2rem 0;
+    position: relative;
+    
+    @include media-breakpoint-up(md) {
+      // START: Tablet size
+      padding: 3rem 0;
+      // END: Tablet size
+    }
+    
+    @include media-breakpoint-up(lg) {
+      // START: Desktop size
+      padding: 4rem 0;
+      // END: Desktop size
+    }
+  }
+  
+  &-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+    &-wrapper {
+      @extend %img-fit-wrapper;
+
+      .hello-dark & {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: rgba($color-monochrome-dark-grey, 0.5);
+          transition: background 1s ease-in 1s;
+        }
+      }
+    }
+  }
+  
+  // section-title & // section-subtitle
+  &-title {
+    margin-bottom: 2.5rem;
+    & > * {
+      margin-bottom: 0;
+    }
+    
+    @include media-breakpoint-up(md) {
+      // START: Tablet size
+      margin-bottom: 3rem;
+      // END: Tablet size
+    }
+    
+    @include media-breakpoint-up(lg) {
+      // START: Desktop size
+      margin-bottom: 3.5rem;
+      // END: Desktop size
+    }
+
+  }
+
+  &-subtitle {
+    @extend .font-light;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  // section-skew
+  &-skew {
+    // .section-img {
+    //   object-position: right;
+    // }
+    
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      background-color: inherit;
+      position: absolute;
+      top: 250px;
+      bottom: -35px;
+      left: 0;
+      right: 0;
+
+      #{$ltr} & {
+        transform: skewY(5deg);
+      }
+
+      #{$rtl} & {
+        transform: skewY(-5deg);
+      }
+      
+
+      @include media-breakpoint-up(md) {
+        // START: Desktop size
+        width: 100vw;
+        top: 0;
+        bottom: 0;
+        
+        #{$ltr} & {
+          left: auto;
+          right: 50%;
+          transform: skewX(-10deg);
+        }
+        
+        #{$rtl} & {
+          right: auto;
+          left: 50%;
+          transform: skewX(10deg);
+        }
+        // END: Desktop size
+      }
+    }
+
+    &-content {
+      padding-top: 250px;
+      position: relative;
+      z-index: 1;
+
+      @include media-breakpoint-up(md) {
+        // START: Desktop size
+        padding-top: 0;
+        // END: Desktop size
+      }
+    }
+  }
+}
+/******** END: Section ********/

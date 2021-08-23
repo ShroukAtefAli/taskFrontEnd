@@ -1,0 +1,135 @@
+%smooth-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+// Horizontal Scroll
+.horizontal-scroll {
+  @extend %smooth-scroll;
+
+  /* Not touchscreens */
+  @media (any-hover: hover) {
+    @include scroll-bar(
+      0.5rem,
+      inset 0 0 3px rgba(0, 0, 0, 0.3),
+      $color-gray-900
+    );
+  }
+
+  .d-table-cell {
+    width: auto;
+  }
+
+  /* Smartphones, Touchscreens */
+  @media (hover: none) and (pointer: coarse) {
+  }
+
+  @include media-breakpoint-down(md) {
+    // START: To Tablet size
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    // background-position: left center, right center, left center, right center;
+    // background-repeat: no-repeat;
+    // background-color: transparent;
+    // background-size: 40px 100%, 40px 100%, 30px 100%, 30px 100%;
+
+    // /* Opera doesn't support this in the shorthand */
+    // background-attachment: local, local, scroll, scroll;
+
+    // &.scroll-shadow-dark{
+    //   background-image:
+    //     /* Shadows */
+    //     linear-gradient(to right, $color-primary-grey, $color-primary-grey),
+    //     linear-gradient(to right, $color-primary-grey, $color-primary-grey),
+
+    //   /* Shadow covers */
+    //     linear-gradient(to right, rgba(0,0,0,.25), rgba(255,255,255,0)),
+    //     linear-gradient(to left, rgba(0,0,0,.25), rgba(255,255,255,0));
+    // }
+  } // END: To Tablet size
+}
+
+.table {
+  &-md {
+    @include media-breakpoint-down(md) {
+      // START: To Tablet size
+      display: table;
+      margin: 0 -10px;
+    } // END: To Tablet size
+  }
+
+  &-cell-md {
+    @include media-breakpoint-down(md) {
+      // START: To Tablet size
+      display: table-cell;
+      width: auto;
+      vertical-align: top;
+    } // END: To Tablet size
+  }
+}
+
+.horizontal-item {
+  width: 120px;
+}
+
+.container-scrollable {
+  @extend %smooth-scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  &:hover {
+    @include scroll-bar(
+      0.5rem,
+      inset 0 0 3px rgba(0, 0, 0, 0.3),
+      lighten($color-gray-500, 20%)
+    );
+  }
+
+  /* Not touchscreens */
+  @media (any-hover: hover) {
+    @include scroll-bar(0.5rem, none, $color-transparent);
+  }
+
+  // Container padding handling
+  @each $container in map-keys($container-max-widths) {
+    @include media-breakpoint-up(#{$container}) {
+      //  LTR
+      #{$ltr-global} & {
+        padding-left: calc(
+          ((100% - #{map-get($container-max-widths, #{$container})}) / 2) +
+            10px
+        );
+      }
+
+      //  RTL
+      #{$rtl-global} & {
+        padding-right: calc(
+          ((100% - #{map-get($container-max-widths, #{$container})}) / 2) +
+            10px
+        );
+      }
+    }
+  }
+
+  .d-table-cell {
+    width: auto;
+  }
+
+  .tile-width {
+    width: 250px;
+
+    @include media-breakpoint-up(lg) {
+      // START: Tablet size
+      width: 350px;
+    } // END: Tablet size
+  }
+
+  .card-product-width {
+    width: 150px;
+
+    @include media-breakpoint-up(lg) {
+      // START: Tablet size
+      width: 160px;
+    } // END: Tablet size
+  }
+}

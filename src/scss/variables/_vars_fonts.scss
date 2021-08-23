@@ -1,0 +1,68 @@
+//[1] Font name
+    // Helpers Fonts
+    $dubai:                             'dubai';
+    $bukra:                             '29lt-bukra';
+
+    // Dubai Fonts
+    $font-family-dubai-regular:         'dubai-regular';
+    $font-family-dubai-light:           'dubai-light';
+    $font-family-dubai-medium:          'dubai-medium';
+    $font-family-dubai-bold:            'dubai-bold';
+
+    // Bukra Fonts
+    $font-family-bukra-regular:         '29lt-bukra-regular';
+    $font-family-bukra-light:           '29lt-bukra-light';
+    $font-family-bukra-bold:            '29lt-bukra-bold';
+    $font-family-bukra-bold-italic:     '29lt-bukra-bold-italic';
+
+
+//[2] Font size
+    $font-size-base-our:            0.8rem !default; // Assumes <html> font size, typically `15px`
+
+    // Headings
+    $h1-size:                   $font-size-base-our * 2.53 !default;
+    $h2-size:                   $font-size-base-our * 1.86 !default;
+    $h3-size:                   $font-size-base-our * 1.66 !default;
+    $h4-size:                   $font-size-base-our * 1.46 !default;
+    $h5-size:                   $font-size-base-our * 1.33 !default;
+    $h6-size:                   $font-size-base-our !default;
+    
+
+    // Subtitles
+    $subtitle1-size:            $font-size-base-our !default;
+    $subtitle2-size:            $font-size-base-our * 0.8 !default;
+    $subtitle3-size:            $font-size-base-our * 0.66 !default;
+    
+
+    // Body
+    $body2-size:                $font-size-base-our * 0.8 !default;
+    $body3-size:                $font-size-base-our * 0.73 !default;
+    
+    
+    // Captions
+    $caption1-size:             $font-size-base-our !default;
+    $caption2-size:             $font-size-base-our * 0.8 !default;
+    $caption3-size:             $font-size-base-our * 0.66 !default;
+    $caption4-size:             $font-size-base-our * 0.73 !default;
+    $caption5-size:             $font-size-base-our * 0.6 !default;
+    
+    
+    // Buttons
+    $btn-size:                  $font-size-base-our * 0.93 !default;
+    $btn-lg-size:               $font-size-base-our * 1.13 !default;
+    $btn-sm-size:               $font-size-base-our * 0.8 !default;
+    $btn-xs-size:               $font-size-base-our * 0.66 !default;
+    
+    
+    // Inputs
+    $input1-size:               $font-size-base-our !default;
+    $input2-size:               $font-size-base-our !default;
+    $input3-size:               $font-size-base-our * 0.93 !default;
+    $input4-size:               $font-size-base-our * 0.8 !default;
+    $input5-size:               $font-size-base-our * 0.66 !default;
+    $input6-size:               $font-size-base-our * 0.73 !default;
+
+    
+    // $small-size:                $font-size-base-our * 0.77 !default;
+    // $small-size-2x:             $font-size-base-our * 0.88 !default;
+    // $small-size-3x:             $font-size-base-our !default;

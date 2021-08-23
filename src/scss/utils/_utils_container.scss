@@ -1,0 +1,76 @@
+/******** START: Container utilities ********/
+.container {
+  &-dashboard {
+    @media screen and (min-width: 767px) and (max-width: 830px) {
+      width: 100%;
+    }
+  }
+  
+  
+  &-fluid {
+    padding: 0 15px;
+    // Container padding handling
+    @each $container in map-keys($container-max-widths) {
+      @include media-breakpoint-up(#{$container}) {
+        &-start {
+          //  LTR
+          #{$ltr-global} & {
+            padding-right: calc(((100% - #{map-get($container-max-widths, #{$container})}) / 2) + 15px);
+            padding-left: 0;
+          }
+          
+          //  RTL
+          #{$rtl-global} & {
+            padding-left: calc(((100% - #{map-get($container-max-widths, #{$container})}) / 2) + 15px);
+            padding-right: 0;
+          }
+        }
+        
+        
+        &-end {
+          //  LTR
+          #{$ltr-global} & {
+            padding-left: calc(((100% - #{map-get($container-max-widths, #{$container})}) / 2) + 15px);
+            padding-right: 0;
+          }
+          
+          //  RTL
+          #{$rtl-global} & {
+            padding-right: calc(((100% - #{map-get($container-max-widths, #{$container})}) / 2) + 15px);
+            padding-left: 0;
+          }
+        }
+      }
+
+    }
+    @include media-breakpoint-down(sm) {
+      &-start,
+      &-end {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+  
+  // &-fluid-end {
+    //     padding: 0 15px;
+    //   // Container padding handling
+    //   @each $container in map-keys($container-max-widths) {
+      //     @include media-breakpoint-up(#{$container}) {
+        //       //  LTR
+        //       #{$ltr-global} & {
+          //         padding-left: calc(((100% - #{map-get($container-max-widths, #{$container})}) / 2) + 15px);
+          //         padding-right: 0;
+          //       }
+          
+          //       //  RTL
+          //       #{$rtl-global} & {
+            //         padding-right: calc(((100% - #{map-get($container-max-widths, #{$container})}) / 2) + 15px);
+            //         padding-left: 0;
+            //       }
+            //     }
+            //   }
+            // }
+          }
+          
+/******** END: Container utilities ********/

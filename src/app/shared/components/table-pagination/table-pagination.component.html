@@ -1,0 +1,19 @@
+<!--------- START: Table Pagination --------->
+<div class="table-pagination">
+    <ul class="table-pagination-items">
+        <li class="table-pagination-item pagination-nav disabled" (click)="leftClick()">
+            <span class="rtl-flip-v"><em class="fms-arrow-left"></em></span>
+        </li>
+
+        <li class="table-pagination-item" [class.active]="active[num+1]" (click)="setActive(num+1)"><span>{{num + 1}}</span></li>
+        <li class="table-pagination-item" [class.active]="active[num+2]" (click)="setActive(num+2)" *ngIf="totalPages>1"><span>{{num + 2}}</span></li>
+        <li class="table-pagination-item" [class.active]="active[num+3]" (click)="setActive(num+3)" *ngIf="totalPages>2"><span>{{num + 3}}</span></li>
+        <li class="table-pagination-item" [class.active]="active[num+4]" (click)="setActive(num+4)" *ngIf="totalPages>3"><span>{{num + 4}}</span></li>
+        <li class="table-pagination-item" [class.active]="active[num+5]" (click)="setActive(num+5)" *ngIf="totalPages>4"><span>{{num + 5}}</span></li>
+
+        <li class="table-pagination-item pagination-nav" (click)="rightClick()">
+            <span class="active rtl-flip-v"><em class="fms-arrow-right"></em></span>
+        </li>
+    </ul>
+</div>
+<!--------- END: Table Pagination --------->

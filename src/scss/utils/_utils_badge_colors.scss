@@ -1,0 +1,9 @@
+// Background colors
+
+.badge {
+  @each $color in $fms-colors {
+    &-#{ "" + nth($color, 1) } {
+      background: nth($color, 2);
+    }
+  }
+}

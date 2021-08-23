@@ -1,0 +1,6 @@
+// Square Dimensions
+@mixin square-dimensions($number, $unit) {
+  width: $number + $unit;
+  height: $number + $unit;
+  box-sizing: content-box;
+}

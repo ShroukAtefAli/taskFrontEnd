@@ -1,0 +1,10 @@
+// .dir-
+.dir {
+  &-ltr {
+    direction: ltr;
+  }
+
+  &-rtl {
+    direction: rtl;
+  }
+}

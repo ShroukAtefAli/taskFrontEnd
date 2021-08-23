@@ -1,0 +1,83 @@
+// Button style
+.btn {
+  @include button($font-size-base-our, $border-radius-default, $button-shadow);
+}
+
+// Button options
+.btn {
+  // .btn-primary
+  &-primary {
+    color: $color-white;
+    fill: $color-white;
+    background: $color-primary;
+    border-color: $color-primary;
+    
+    &:hover {
+    }
+
+    &.btn-disabled,
+    &:disabled {
+      color: $color-white;
+      background: $color-gray-500;
+      border-color: $color-gray-500;
+    }
+  }
+
+  // .btn-secondary
+  &-secondary {
+    color: $color-primary;
+    background-color: $color-transparent;
+    border-color: $color-primary;
+    
+    &:hover {
+      background-color: lighten($color-gray-200, 60%);
+    }
+    
+    &:focus {
+      // background-color: $color-black;
+    }
+    
+    &.btn-disabled,
+    &:disabled {
+      color: lighten($color-gray-600, 15%);
+      background-color: $color-transparent;
+      border-color: lighten($color-gray-600, 15%);
+    }
+  }
+  // btn-red
+  &-red {
+    color: $color-white;
+    fill: $color-white;
+    background: linear-gradient(0deg, #fe5f4f, #e74c3c);
+
+    &:hover {
+    }
+  }
+
+  &-disabled{
+    color:$color-black-32;
+    fill: $color-gray-500;
+    background: $color-gray-500;
+    box-shadow: none;
+    cursor: not-allowed !important;
+
+    &:hover {
+    }
+
+  }
+
+  &-sm {
+    font-size: $font-size-base-our * 0.8;
+    padding: $font-size-base-our * 0.5 $font-size-base-our;
+  }
+
+  &-lg {
+    font-size: $font-size-base-our + 0.2;
+    padding: $font-size-base-our $font-size-base-our * 1.4;
+  }
+
+  &-xs {
+    font-size: $font-size-base-our * 0.5;
+    padding: $font-size-base-our * 0.5 $font-size-base-our;
+  }
+}

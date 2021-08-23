@@ -1,0 +1,66 @@
+$fms-colors : (
+  // Standard Colors
+  black:                            $color-black,
+  white:                            $color-white,
+  transparent:                      $color-transparent,
+
+
+  // Primary Colors
+  primary:                          $color-primary,
+  primary-900:                      $color-primary-900,
+  primary-800:                      $color-primary-800,
+  primary-700:                      $color-primary-700,
+  primary-600:                      $color-primary-600,
+  primary-500:                      $color-primary-500,
+  primary-400:                      $color-primary-400,
+  primary-300:                      $color-primary-300,
+  primary-200:                      $color-primary-200,
+  primary-100:                      $color-primary-100,
+  primary-50:                       $color-primary-50,
+  
+
+  // Secondary Colors
+  secondary:                        $color-secondary,
+  secondary-900:                    $color-secondary-900,
+  secondary-800:                    $color-secondary-800,
+  secondary-700:                    $color-secondary-700,
+  secondary-600:                    $color-secondary-600,
+  secondary-500:                    $color-secondary-500,
+  secondary-400:                    $color-secondary-400,
+  secondary-300:                    $color-secondary-300,
+  secondary-200:                    $color-secondary-200,
+  secondary-100:                    $color-secondary-100,
+  secondary-50:                     $color-secondary-50,
+  
+  
+  // Tertiary Colors
+  gable-green:                      $color-gable-green,
+  mid-gray:                         $color-mid-gray,
+  khaki:                            $color-khaki,
+  lavender:                         $color-lavender,
+  persian-green:                    $color-persian-green,
+
+
+  // Gray Colors
+  gray-900:                         $color-gray-900,
+  gray-800:                         $color-gray-800,
+  gray-700:                         $color-gray-700,
+  gray-600:                         $color-gray-600,
+  gray-500:                         $color-gray-500,
+  gray-400:                         $color-gray-400,
+  gray-300:                         $color-gray-300,
+  gray-200:                         $color-gray-200,
+  gray-100:                         $color-gray-100,
+  
+  
+  // Alert Colors
+  alert-success:                    $color-alert-success,
+  alert-info:                       $color-alert-info,
+  alert-warning:                    $color-alert-warning,
+  alert-deny:                       $color-alert-deny,
+
+
+  // Overlay Colors
+  overlay-dark:                     $color-overlay-dark,
+  overlay-light:                    $color-overlay-light
+);

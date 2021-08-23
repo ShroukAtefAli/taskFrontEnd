@@ -1,0 +1,89 @@
+// Forms basics
+
+@mixin form-input(
+  $default-border,
+  $hover-border,
+  $focus-border,
+  $valid-border,
+  $invalid-border
+) {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 1px solid $default-border;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+
+  padding: 0.5rem 1rem;
+  line-height: 1.25;
+
+  &:hover {
+    border-color: $hover-border;
+  }
+
+  &:focus,
+  &:active,
+  &:focus:hover,
+  &:active:hover {
+    border-color: $focus-border;
+  }
+
+  &:disabled {
+    background: $color-monochrome-light-grey;
+    cursor: not-allowed;
+    border-color: $default-border;
+    opacity: 0.5;
+  }
+  #{$ltr} & {
+    padding-right: calc(1.5em + 0.75rem);
+    padding-left: 1rem;
+
+    &:valid,
+    &.is-valid,
+    &.ng-valid,
+    &:invalid,
+    &.is-invalid,
+    //&.ng-invalid,
+    &.ng-invalid.ng-touched {
+      background-position: center right calc(0.375em + 0.1875rem);
+    }
+  }
+  #{$rtl} & {
+    padding-left: calc(1.5em + 0.75rem);
+    padding-right: 1rem;
+
+    &:valid,
+    &.is-valid,
+    &.ng-valid,
+    &:invalid,
+    &.is-invalid,
+    //&.ng-invalid,
+    &.ng-invalid.ng-touched {
+      background-position: center left calc(0.375em + 0.1875rem);
+    }
+  }
+}
+
+@mixin was-validated($vaild-feedback, $invalid-feedback) {
+  .valid-feedback {
+    color: $vaild-feedback;
+  }
+  .invalid-feedback {
+    color: $invalid-feedback;
+  }
+  .form-control {
+    &:valid,
+    &:valid:hover,
+    &:valid:focus,
+    &:valid:active {
+      border-color: $vaild-feedback;
+    }
+
+    &:invalid,
+    &:invalid:hover,
+    &:invalid:focus,
+    &:invalid:active {
+      border-color: $invalid-feedback;
+    }
+  }
+}

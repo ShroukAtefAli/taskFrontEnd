@@ -1,0 +1,72 @@
+// Font family
+
+.font {
+  // .font-dubai
+  &-dubai {
+
+    // .font-dubai-regular
+    &-regular {
+      @include font-family($font-family-dubai-regular);
+    }
+
+    // .font-dubai-light
+    &-light {
+      @include font-family($font-family-dubai-light);
+    }
+
+    // .font-dubai-medium
+    &-medium {
+      @include font-family($font-family-dubai-medium);
+    }
+    
+    // .font-dubai-bold
+    &-bold {
+      @include font-family($font-family-dubai-bold);
+    }
+  }
+
+
+
+   // .font-bukra
+   &-bukra {
+
+    // .font-bukra-regular
+    &-regular {
+      @include font-family($font-family-bukra-regular);
+    }
+
+    // .font-bukra-light
+    &-light {
+      @include font-family($font-family-bukra-light);
+    }
+    
+    // .font-bukra-bold
+    &-bold {
+      @include font-family($font-family-bukra-bold);
+    }
+
+    // .font-bukra-bold-italic
+    &-bold-italic {
+      @include font-family($font-family-bukra-bold-italic);
+    }
+  }
+  
+  // Customize with screen sizes
+  @each $item in map-keys($container-max-widths) {
+    &-#{$item} {
+      @include media-breakpoint-up(#{$item}) {
+        // &-light {
+        //   @include font-style;
+        // }
+        
+        // &-regular {
+        //   @include font-style;
+        // }
+      
+        // &-bold {
+        //   @include font-bold;
+        // }
+      }
+    }
+  }
+}

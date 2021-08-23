@@ -1,0 +1,38 @@
+
+.overlay {
+  // Overlay Container
+  &-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  // Overlay Body
+  &-body {
+    width: 100%;
+    max-height: 80%;
+    position: relative;
+    background: #fff;
+    padding: 15px;
+    margin: 0;
+    border-radius: .25rem .25rem 0 0;
+    overflow: auto;
+
+  }
+
+  // Overlay close icon
+  &-close {
+    position: absolute;
+    top: 15px;
+    cursor: pointer;
+  }
+}
+
+// END: Overlay container styles

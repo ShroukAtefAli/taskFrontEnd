@@ -1,0 +1,10 @@
+// Radius
+
+.radius {
+  border-radius: $font-size-base-our * 0.5;
+
+  &-sm { border-radius:  $font-size-base-our * 0.25 }
+  &-2x { border-radius:  $font-size-base-our * 1 }
+  &-3x { border-radius:  $font-size-base-our * 1.4 }
+  &-circle { border-radius:  $font-size-base-our * 99 }
+}

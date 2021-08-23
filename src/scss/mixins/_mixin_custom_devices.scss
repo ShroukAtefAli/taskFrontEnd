@@ -1,0 +1,141 @@
+// Custom Devices media
+
+@mixin screen-device($device, $orientation) {
+
+  /******** START: Apple devices ********/
+  
+  /* ----- iPhone 4 and 4S ----- */
+  /* portrait */
+  @if ($device == 'iphone4' or $device == 'iphone4s') and $orientation == 'portrait' {
+    @media only screen and (device-width: 320px) and (device-height: 480px) and (orientation: portrait) {
+      @content;
+    }
+  }
+    /* landscape */
+  @else if ($device == 'iphone4' or $device == 'iphone4s') and $orientation == 'landscape' {
+    @media only screen and (device-width: 480px) and (device-height: 320px) and (orientation: landscape) {
+      @content;
+    }
+  }
+    /* ----- iPhone 5 and 5S and SE ----- */
+    /* portrait */
+  @else if ($device == 'iphone5' or $device == 'iphone5s' or $device == 'iphoneSE') and $orientation == 'portrait' {
+    @media only screen and (device-width: 320px) and (device-height: 568px) and (orientation: portrait) {
+      @content;
+    }
+  }
+    /* landscape */
+  @else if ($device == 'iphone5' or $device == 'iphone5s' or $device == 'iphoneSE') and $orientation == 'landscape' {
+    @media only screen and (device-width: 568px) and (device-height: 320px) and (orientation: landscape) {
+      @content;
+    }
+  }
+    /* ----- iPhone 6 and 7 and 8 ----- */
+    /* portrait */
+  @else if ($device == 'iphone6' or $device == 'iphone7' or $device == 'iphone8') and $orientation == 'portrait' {
+    @media only screen and (device-width: 375px) and (orientation: portrait) {
+      @content;
+    }
+  }
+    /* landscape */
+  @else if ($device == 'iphone6' or $device == 'iphone7' or $device == 'iphone8') and $orientation == 'landscape' {
+    @media only screen and (device-width: 667px) and (device-height: 375px) and (orientation: landscape) {
+      @content;
+    }
+  }
+    /* ----- iPhone 6plus and 7plus and 8plus ----- */
+    /* portrait */
+  @else if ($device == 'iphone6plus' or $device == 'iphone7plus' or $device == 'iphone8plus') and $orientation == 'portrait' {
+    @media only screen and (device-width: 414px) and (device-height: 736px) and (orientation: portrait) {
+      @content;
+    }
+  }
+    /* landscape */
+  @else if ($device == 'iphone6plus' or $device == 'iphone7plus' or $device == 'iphone8plus') and $orientation == 'landscape' {
+    @media only screen and (device-width: 736px) and (device-height: 414px) and (orientation: landscape) {
+      @content;
+    }
+  }
+    /* -----  iPhone 11 and iPhone XR ----- */
+    /* portrait */
+  @else if ($device == 'iphone11' or $device == 'iphoneXR') and $orientation == 'portrait' {
+    @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+      @content;
+    }
+  }
+    /* landscape */
+  @else if ($device == 'iphone11' or $device == 'iphoneXR') and $orientation == 'landscape' {
+    @media only screen and (device-width: 896px) and (device-height: 414px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+    /* ----- iPhone 11 Pro and iPhone X and iPhone XS ----- */
+    /* portrait */
+  @else if ($device == 'iphoneX' or $device == 'iphoneXS' or $device == 'iphone11Pro') and $orientation == 'portrait' {
+    @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+      @content;
+    }
+  }
+    /* landscape */
+  @else if ($device == 'iphoneX' or $device == 'iphoneXS' or $device == 'iphone11Pro') and $orientation == 'landscape' {
+    @media only screen and (device-width: 812px) and (device-height: 375px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+      @content;
+    }
+  }
+    /* ----- iPhone 11 Pro Max and iPhone Xs Max ----- */
+    /* portrait */
+  @else if ($device == 'iphoneX' or $device == 'iphoneXS') and $orientation == 'portrait' {
+    @media only screen and (device-width: 375px) and (device-height: 812px) and (orientation: portrait) {
+      @content;
+    }
+  }
+    /* landscape */
+  @else if ($device == 'iphoneX' or $device == 'iphoneXS') and $orientation == 'landscape' {
+    @media only screen and (device-width: 812px) and (device-height: 375px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+      @content;
+    }
+  }
+  /******** END: Apple devices ********/
+
+    /* --------------------------------------------------Android devices-------------------------------------------------------------------------------*/
+    /* ----- android small----- */
+    /* portrait */
+  @else if ($device == 'android-sm') and $orientation == 'portrait' {
+    @media only screen and (device-width: 360px) and (orientation: portrait) {
+      @content;
+    }
+  }
+    /* landscape */
+  @else if ($device == 'android-sm') and $orientation == 'landscape' {
+    @media only screen and (device-height: 732px) and (orientation: landscape) {
+      @content;
+    }
+  }
+    /* ----- android medium ----- */
+  @else if ($device == 'android-md') and $orientation == 'portrait' {
+    @media only screen and (device-width: 384px) and (orientation: portrait) {
+      @content;
+    }
+  }
+    /* landscape */
+  @else if ($device == 'android-md') and $orientation == 'landscape' {
+    @media only screen and (device-width: 732px) and (max-height: 384px) and (orientation: landscape) {
+      @content;
+    }
+  }
+    /* ----- android large ----- */
+  @else if ($device == 'android-lg') and $orientation == 'portrait' {
+    @media only screen and (min-width: 412px) and (max-width: 425px)
+    and (max-height: 859px) and (min-height: 640px)
+    and (orientation: portrait) {
+      @content;
+    }
+  }
+    /* landscape */
+  @else if ($device == 'android-lg') and $orientation == 'landscape' {
+    @media only screen and (device-width: 732px) and (device-height: 412px) and (orientation: landscape) {
+      @content;
+    }
+  }
+}

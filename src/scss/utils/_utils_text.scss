@@ -1,0 +1,76 @@
+// Text alignment
+
+.text {
+  @each $dir in $alignment-direction {
+    &-#{$dir} {
+      @if $dir == start {
+        // .text-start
+        #{$ltr-global} & {
+          text-align: left !important;
+        }
+        #{$rtl-global} & {
+          text-align: right !important;
+        }
+      } @else if $dir == end {
+        // .text-end
+        #{$ltr-global} & {
+          text-align: right !important;
+        }
+        #{$rtl-global} & {
+          text-align: left !important;
+        }
+      }
+      // @else if $dir == center { // .text-center
+      //   text-align: center;
+      // }
+    }
+  }
+
+  @each $item in map-keys($grid-breakpoints) {
+    &-#{$item} {
+      @each $dir in $alignment-direction {
+        &-#{$dir} {
+          @include media-breakpoint-up(#{$item}) {
+            @if $dir == start {
+              #{$ltr-global} & {
+                text-align: left !important;
+              }
+              #{$rtl-global} & {
+                text-align: right !important;
+              }
+            } @else if $dir == end {
+              #{$ltr-global} & {
+                text-align: right !important;
+              }
+              #{$rtl-global} & {
+                text-align: left !important;
+              }
+            } @else if $dir == center {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Text-transform
+  &-transform {
+    &-none {
+      text-transform: none;
+    }
+  }
+
+  // Text-strike
+  &-strike {
+    text-decoration: line-through;
+  }
+
+  &-underline {
+    text-decoration: underline;
+    
+    &:hover{
+      @extend .text-underline;
+    }
+  }
+}

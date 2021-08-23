@@ -1,0 +1,21 @@
+{
+  "header":{
+    "language":"عربي",
+    "notification":"Notification",
+    "archived":"Archived"
+  },
+  "table":{
+    "id":"ID",
+    "title":"عنوان المنتج",
+    "description":"الوصف",
+    "price":"السعر",
+    "category":"التصنيف",
+    "image":"الصوره"
+  },
+  "login":"دخول",
+  "username":"اسم المس",
+  "password":"الرقم السري",
+  "language":"English",
+  "productsTitle":"عرض المنتجات"
+
+}

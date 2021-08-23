@@ -1,0 +1,5 @@
+// Font style
+
+@mixin font-family($font-name) {
+  font-family: $font-name, sans-serif;
+}

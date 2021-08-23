@@ -1,0 +1,20 @@
+{
+  "header":{
+    "language":"عربي",
+    "notification":"Notification",
+    "archived":"Archived"
+  },
+  "table":{
+    "id":"ID",
+    "title":"Title",
+    "description":"Description",
+    "price":"Price",
+    "category":"Category",
+    "image":"Image"
+  },
+  "login":"Login",
+  "username":"enter your name",
+  "password":"enter your password",
+  "language":"عربي",
+  "productsTitle":"Products Display"
+}

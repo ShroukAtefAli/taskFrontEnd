@@ -1,0 +1,80 @@
+// Background colors
+
+.bg {
+  @each $color in $fms-colors {
+    &-#{ "" + nth($color, 1) } {
+      background: nth($color, 2);
+    }
+  }
+}
+
+
+.bg {
+
+  // Gradients
+  &-g {
+    
+    // Gradient direction Top to Down
+    &-green {
+      background: linear-gradient(180deg, rgba(13,160,110,1) 0%, rgba(7,200,128,1) 100%);
+    }
+  
+    &-dark-green {
+      background: linear-gradient(180deg, rgba(0,88,69,1) 0%, rgba(0,156,98,1) 100%);
+    }
+
+    &-blue {
+      background: linear-gradient(180deg, rgba(0,138,255,1) 0%, rgba(34,171,255,1) 100%);
+    }
+
+    &-orange {
+      background: linear-gradient(180deg, rgba(220,159,5,1) 0%, rgba(224,170,5,1) 100%);
+    }
+
+    &-red {
+      background: linear-gradient(180deg, rgba(231,76,60,1) 0%, rgba(254,95,79,1) 100%);
+    }
+
+    
+    // Gradient direction Start to End
+    &-alert-success {
+      #{$ltr-global} & {
+        background: linear-gradient(90deg, rgba(13,160,110,1) 0%, rgba(7,200,128,1) 100%);
+      }
+    
+      #{$rtl-global} & {
+        background: linear-gradient(270deg, rgba(13,160,110,1) 0%, rgba(7,200,128,1) 100%);
+      }
+    }
+
+    &-alert-info {
+      #{$ltr-global} & {
+        background: linear-gradient(90deg, rgba(0,158,255,1) 0%, rgba(34,171,255,1) 100%);
+      }
+    
+      #{$rtl-global} & {
+        background: linear-gradient(270deg, rgba(0,158,255,1) 0%, rgba(34,171,255,1) 100%);
+      }
+    }
+
+    &-alert-warning {
+      #{$ltr-global} & {
+        background: linear-gradient(90deg, rgba(220,159,5,1) 0%, rgba(224,170,5,1) 100%);
+      }
+    
+      #{$rtl-global} & {
+        background: linear-gradient(270deg, rgba(220,159,5,1) 0%, rgba(224,170,5,1) 100%);
+      }
+    }
+
+    &-alert-deny {
+      #{$ltr-global} & {
+        background: linear-gradient(90deg, rgba(231,76,60,1) 0%, rgba(254,95,79,1) 100%);
+      }
+    
+      #{$rtl-global} & {
+        background: linear-gradient(270deg, rgba(231,76,60,1) 0%, rgba(254,95,79,1) 100%);
+      }
+    }
+  }
+}

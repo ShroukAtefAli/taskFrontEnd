@@ -1,0 +1,20 @@
+// Imports
+@import "../imports/functions";
+
+
+
+.card{
+    // align-items-center bg-primary card color-white d-flex justify-content-between p-3 rounded mb-3
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: $border-radius-default;
+    border: 1px solid $color-gray-500;
+
+    &-primary {
+        background: $color-primary;
+        color: $color-white;
+    }
+}

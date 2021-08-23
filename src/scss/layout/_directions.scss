@@ -1,0 +1,15 @@
+#{$ltr-global} {
+  direction: ltr;
+  text-align: left;
+}
+
+#{$rtl-global} {
+  direction: rtl;
+  text-align: right;
+}
+
+// Reset directions when project is Static
+@if $project-path == $path-static {
+  $ltr: $ltr-global;
+  $rtl: $rtl-global;
+}

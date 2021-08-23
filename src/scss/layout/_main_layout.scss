@@ -1,0 +1,33 @@
+/******** START: Main Layout ********/
+.main {
+  &-header {
+    height: $header-height;
+    background-color: $color-primary;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  
+    * {
+      outline: none !important;
+    
+      &:focus {
+        outline: none !important;
+      }
+    }
+  
+    ul {
+      list-style: none;
+    }
+  }
+
+  &-sidebar {
+    transition: width 0.4s ease-out;
+  }
+
+  
+  &-content {
+    transition: all 0.4s ease-out;
+  }
+}
+
+/******** END: Main Layout ********/

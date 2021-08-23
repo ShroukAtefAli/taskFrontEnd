@@ -1,0 +1,23 @@
+// Directions var selector for shared SCSS [Global Files]
+$ltr-global: '[ dir = "ltr" ]';
+$rtl-global: '[ dir = "rtl" ]';
+
+// Directions var selector for Angular SCSS [Angular Files]
+$ltr: '[ dir = "ltr" ] :host-context';
+$rtl: '[ dir = "rtl" ] :host-context';
+
+/*******
+  For using code
+  Example:
+
+
+  #{$ltr} {
+    Property: Value;
+  }
+*******/
+
+// Reset directions when project is Static version
+@if $project-path == $path-static {
+  $ltr: $ltr-global;
+  $rtl: $rtl-global;
+}

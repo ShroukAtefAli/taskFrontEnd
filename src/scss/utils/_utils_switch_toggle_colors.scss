@@ -1,0 +1,24 @@
+// .switch {
+//   @each $color in $fms-colors {
+//     &-#{ "" + nth($color, 1) } {
+//       .custom-control-input:checked ~ .custom-control-label::before{
+//         background: nth($color, 2);
+//         border-color: nth($color, 2)
+//       }
+//     }
+//   }
+// }
+
+
+.custom-control-input:checked ~ .custom-control-label{
+  &.switch {
+    @each $color in $fms-colors {
+      &-#{ "" + nth($color, 1) } {
+        &::before{
+          background-color: nth($color, 2) !important;
+          border-color: nth($color, 2) !important;
+        }
+      }
+    }
+  }
+}

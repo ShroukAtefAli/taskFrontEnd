@@ -1,0 +1,17 @@
+
+
+<div class="_body">
+
+<div class="row tab tabcontent">
+  <div class="col-3 " *ngFor="let cat of categorries;let i = index">
+    <button class="tablinks" [ngClass]="{'active': activeTab === cat}" (click)="changeCategory(cat)">{{cat}}</button>
+  </div>
+</div>
+
+<div class="row tabcontent">
+  <div class="col-4" *ngFor="let product of products">
+    <app-card-data [data]="product" (addClicked)="addToCart(product)"></app-card-data>
+
+  </div>
+</div>
+</div>

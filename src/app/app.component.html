@@ -1,0 +1,15 @@
+
+
+<div [dir]="direction">
+
+  <div class="topnav" dir="rtl">
+    <a [ngClass]="{'active': activeTab === tab.name}"
+       [routerLink]="tab.route" *ngFor="let tab of tabs "
+        (click)="tabChange(tab)">{{tab.name}}</a>
+
+        <a  (click)="language()">{{'language' |translate}}</a>
+
+  </div>
+   <router-outlet></router-outlet>
+</div>
+ <app-spinner></app-spinner>

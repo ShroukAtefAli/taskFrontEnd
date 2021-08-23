@@ -1,0 +1,12 @@
+// Set cursor clasess
+.cursor {
+  &-pointer {
+    cursor: pointer;
+  }
+  &-help {
+    cursor: help;
+  }
+  &-not-allowed {
+    cursor: not-allowed;
+  }
+}

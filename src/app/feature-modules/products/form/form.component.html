@@ -1,0 +1,31 @@
+
+
+
+<div class="row justify-content-center">
+  <div class="col-9">
+    <form method="POST" #myform="ngForm" (ngSubmit)="submitForm(myform.value)">
+      <div class="container">
+        <h3>product information</h3>
+
+        <label for="title"><b>Title</b></label>
+        <input type="text" placeholder="Enter Title" name="title" id="price" [(ngModel)]="product.title" required>
+
+        <label for="price"><b>Price</b></label>
+        <input type="text" placeholder="Enter price" name="price" id="price" [(ngModel)]="product.price" required>
+
+        <label for="description"><b>Description</b></label>
+        <input type="text" placeholder="Enter Description" name="description" id="description" [(ngModel)]="product.description" required>
+
+        <label for="category"><b>Category</b></label>
+        <input type="text" placeholder="Enter Category" name="category" id="category" [(ngModel)]="product.category" required>
+
+        <label for="description"><b>Image</b></label>
+        <input type="text" placeholder="Enter image url" name="image" id="image" [(ngModel)]="product.image" required>
+
+        <button type="submit" class="registerbtn" [disabled]="!myform.valid">Submit</button>
+      </div>
+    </form>
+
+
+  </div>
+</div>

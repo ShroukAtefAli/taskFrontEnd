@@ -1,0 +1,59 @@
+// Imports
+@import "../imports/functions";
+
+/******** START: Main Content ********/
+.main-content {
+  min-height: 100vh;
+
+  #{$ltr-global} & {
+    margin-left: 75px;
+  }
+  
+  #{$rtl-global} & {
+    margin-right: 75px;
+  }
+
+  &.open {
+    #{$ltr-global} & {
+      margin-left: 280px;
+    }
+    
+    #{$rtl-global} & {
+      margin-right: 280px;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: $header-height;
+    background-color: $color-primary;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    box-shadow: $box-shadow;
+  }
+}
+
+.content-wrapper {
+  background-color: $color-white;
+  border: $theme-border-default;
+  border-radius: $theme-border-radius;
+  position: relative;
+  margin-bottom: 0.5rem;
+  // overflow: hidden;
+
+  &-space {
+    padding: 1.5rem;
+  }
+  
+  &-title {
+    color: $color-primary;
+    margin-bottom: 3.5rem;
+    font-family: $font-family-bukra-bold;
+    @extend .h4;
+  }
+}
+/******** END: Main Content ********/

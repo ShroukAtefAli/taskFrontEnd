@@ -1,0 +1,9 @@
+
+
+<div class="card">
+  <img [src]="data.image" alt="product Image"  style="width:20%;height: 20%;">
+  <h3>{{data.title}}</h3>
+  <p class="price">$ {{data.price}}</p>
+  <p>{{data.description}}</p>
+  <p><button (click)="onAddClick()">Add to Cart</button></p>
+</div>

@@ -1,0 +1,48 @@
+
+<app-overlay *ngIf="isModalOpened" (closeModal)="closingModal()">
+  <app-form
+  [product]="productToUpdate"
+  (updatEvent)="saveProduct($event)">
+</app-form>
+</app-overlay>
+
+
+
+<div class="row justify-content-center top-p">
+  <div class="col-9">
+    <div class="row justify-content-center">
+      <h2>{{'productsTitle'|translate}}</h2>
+    </div>
+    <div class="top-p">
+      <table>
+        <tr>
+          <th>{{'table.id'|translate}}</th>
+          <th>{{'table.title'|translate}}</th>
+          <th>{{'table.price'|translate}}</th>
+          <th>{{'table.description'|translate}}</th>
+          <th>{{'table.category'|translate}}</th>
+          <th>{{'table.image'|translate}}</th>
+          <th><button class="button button1" (click)="onAdd()">Add</button></th>
+        </tr>
+        <tr  *ngFor=" let item of products; let i =index">
+          <td>{{item.id}}</td>
+          <td>{{item.title}}</td>
+          <td>{{item.price}}</td>
+          <td>{{item.description}}</td>
+          <td>{{item.category}}</td>
+          <td>
+            <img alt="" style="width: 40px;height: 40px;"
+            src="{{item.image}}">
+          </td>
+          <td>
+            <button class="button button2" (click)="onUpdate(i)">Update</button>
+            <button class="button button3" (click)="onDelete(item.id)">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<!-- <pre>{{products | json}}</pre> -->

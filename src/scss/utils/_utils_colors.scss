@@ -1,0 +1,10 @@
+// Colors
+
+.color {
+  @each $color in $fms-colors {
+    &-#{ "" + nth($color, 1) } {
+      color: nth($color, 2);
+    }
+  }
+}
+

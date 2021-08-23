@@ -1,0 +1,33 @@
+/******** START: Sidebar Notification ********/
+.sidebar {
+  
+  &-notification {
+    min-width: 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 14px;
+    color: $color-white;
+    background-color: $color-alert-deny;
+    @extend .font-bukra-regular;
+    padding: 2px   0.35rem 0;
+    border-radius: 3rem;
+    
+    #{$ltr-global} & {
+      font-size: 0.75rem;
+    }
+    #{$rtl-global} & {
+      font-size: 0.5rem;
+    }
+
+    // &:last-child {
+    //   #{$ltr-global} & {
+    //     margin-right: 55px;
+    //   }
+    //   #{$rtl-global} & {
+    //     margin-left: 55px;
+    //   }
+    // }
+  }
+}
+/******** END: Sidebar Notification ********/

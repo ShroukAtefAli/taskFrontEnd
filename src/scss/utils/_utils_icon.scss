@@ -1,0 +1,101 @@
+// Mixins
+@mixin icon-sizes() {
+  &-1 {
+    @include square-dimensions(1, rem);
+  }
+
+  &-2 {
+    @include square-dimensions(1.125, rem);
+  }
+
+  &-3 {
+    @include square-dimensions(1.5, rem);
+  }
+
+  &-4 {
+    @include square-dimensions(2, rem);
+  }
+
+  &-5 {
+    @include square-dimensions(2.25, rem);
+  }
+
+  &-6 {
+    @include square-dimensions(3, rem);
+  }
+
+  &-7 {
+    @include square-dimensions(4, rem);
+  }
+
+  &-8 {
+    @include square-dimensions(4.5, rem);
+  }
+
+  &-9 {
+    @include square-dimensions(5.25, rem);
+  }
+
+  &-10 {
+    @include square-dimensions(6, rem);
+  }
+
+  &-11 {
+    @include square-dimensions(7.5, rem);
+  }
+}
+
+/******** START: Icons ********/
+.icon {
+  // display: inline-block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 0.4rem;
+  vertical-align: middle;
+
+  @include icon-sizes;
+
+  // icon-sm-
+  &-sm {
+    @include media-breakpoint-up(sm) {
+      // START: Mobile size
+      @include icon-sizes;
+      // END: Mobile size
+    }
+  }
+
+  // icon-md-
+  &-md {
+    @include media-breakpoint-up(md) {
+      // START: Tablet size
+      @include icon-sizes;
+      // END: Tablet size
+    }
+  }
+
+  // icon-lg-
+  &-lg {
+    @include media-breakpoint-up(lg) {
+      // START: Desktop size
+      @include icon-sizes;
+      // END: Desktop size
+    }
+  }
+
+  // icon-xl-
+  &-xl {
+    @include media-breakpoint-up(xl) {
+      // START: Large screen size
+      @include icon-sizes;
+      // END: Large screen size
+    }
+  }
+
+  // icon-circle
+  &-circle,
+  [class*="icon-circle"] {
+    display: inline-block;
+    border-radius: 50%;
+  }
+}
+/******** END: Icons ********/

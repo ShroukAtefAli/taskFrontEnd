@@ -1,0 +1,7 @@
+// Font Face
+
+@mixin font-face($font-name) {
+  $font-path: "/assets/fonts/" + $font-name + ".ttf"; // TODO work arround for font baths after build
+  font-family: $font-name;
+  src: url($font-path);
+}

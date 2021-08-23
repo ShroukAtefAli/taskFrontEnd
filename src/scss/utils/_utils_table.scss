@@ -1,0 +1,20 @@
+
+.table-wrapper{
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    table {
+        width: auto ;
+        min-width: 100%;
+        overflow: auto;
+    }
+
+    .actions-btn {
+        width: 48px ;
+        height: 48px;
+        &:hover {
+            
+        background-color: rgba(0, 0, 0, 0.4);
+        }
+    }
+}

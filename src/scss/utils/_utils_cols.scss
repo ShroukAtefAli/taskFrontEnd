@@ -1,0 +1,21 @@
+.col {
+  &-mb { // Margin bottom for cols
+    margin-bottom: 20px;
+
+    @include media-breakpoint-up(md) {
+      // START: Tablet size
+      margin-bottom: 30px;
+      // END: Tablet size  
+    }
+  }
+
+  &-mt { // Margin top for cols
+    margin-top: 20px;
+
+    @include media-breakpoint-up(md) {
+      // START: Tablet size
+      margin-top: 30px;
+      // END: Tablet size
+    }
+  }
+}

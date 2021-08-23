@@ -1,0 +1,82 @@
+// Imports
+@import "../imports/functions";
+
+
+/******** START: Spacing ********/
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    // Margin & Padding
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $spacers {
+        .#{$abbrev}-end#{$infix}-#{$size} {
+          #{$ltr-global} & {
+            #{$prop}-right: $length !important;
+          }
+          
+          #{$rtl-global} & {
+            #{$prop}-left: $length !important;
+          }
+        }
+        
+        .#{$abbrev}-start#{$infix}-#{$size} {
+          #{$ltr-global} & {
+            #{$prop}-left: $length !important;
+          }
+          
+          #{$rtl-global} & {
+            #{$prop}-right: $length !important;
+          }
+        }
+      }
+    }
+
+    // Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
+     @each $size, $length in $spacers {
+      @if $size != 0 {        
+        .m-end#{$infix}-n#{$size} {
+          #{$ltr-global} & {
+            margin-right: -$length !important;
+          }
+          
+          #{$rtl-global} & {
+            margin-left: -$length !important;
+          }
+        }
+        
+        .m-start#{$infix}-n#{$size} {
+          #{$ltr-global} & {
+            margin-left: -$length !important;
+          }
+          
+          #{$rtl-global} & {
+            margin-right: -$length !important;
+          }
+        }
+      }
+    }
+
+    // Some special margin utils
+    .m-end#{$infix}-auto {
+      #{$ltr-global} & {
+        margin-right: auto !important;
+      }
+      
+      #{$rtl-global} & {
+        margin-left: auto !important;
+      }
+    }
+   
+    .m-start#{$infix}-auto {
+      #{$ltr-global} & {
+        margin-left: auto !important;
+      }
+      
+      #{$rtl-global} & {
+        margin-right: auto !important;
+      }
+    }
+  }
+}
+/******** END: Spacing ********/

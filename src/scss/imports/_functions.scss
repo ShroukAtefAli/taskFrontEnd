@@ -1,0 +1,11 @@
+//[1] Functions imports
+//[1.1] Bootstrap functions
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+
+//[1.2] Theme functions
+@import "../extends/_extends";
+@import "../variables/_variables";
+@import "../mixins/_mixins";
+// @import "../utils/utils_fade_out";

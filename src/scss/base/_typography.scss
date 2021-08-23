@@ -1,0 +1,222 @@
+//[1]  Font Faces & Root
+
+//[1.1] Dubai Fonts
+@font-face {
+  @include font-face($font-family-dubai-regular);
+}
+
+@font-face {
+  @include font-face($font-family-dubai-light);
+}
+
+@font-face {
+  @include font-face($font-family-dubai-medium);
+}
+
+@font-face {
+  @include font-face($font-family-dubai-bold);
+}
+
+//[1.2] Bukra Fonts
+@font-face {
+  @include font-face($font-family-bukra-regular);
+}
+
+@font-face {
+  @include font-face($font-family-bukra-light);
+}
+
+@font-face {
+  @include font-face($font-family-bukra-bold);
+}
+
+@font-face {
+  @include font-face($font-family-bukra-bold-italic);
+}
+
+@import './fms_icons';
+
+html {
+  font-size: $font-size-base-our;
+  &#{$ltr-global} {
+    // font-size: 15px;
+  }
+  
+  &#{$rtl-global} {
+    // font-size: 17px;
+  }
+}
+
+body {
+  font-size: $font-size-base-our;
+  font-family: $font-family-dubai-regular;
+  // line-height: 1.25;
+  line-height: 1.5;
+}
+
+.body-3 {
+  font-size: $body2-size;
+  // font-family: $font-family-dubai-regular;
+}
+
+.body-3 {
+  font-size: $body3-size;
+  // font-family: $font-family-dubai-regular;
+}
+
+//[2]  Paragraphs
+.text {
+  // &-normal {
+  //   font-size: $font-size-base-our;
+  // }
+
+  // &-2x {
+  //   font-size: $body-size-2x;
+  // }
+
+  // &-3x {
+  //   font-size: $body-size-3x;
+  // }
+}
+
+//[3]  Headings
+
+//[3.1]  General
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+//[3.1]  Size normal
+h1,
+.h1 {
+  font-size: $h1-size;
+  @include font-family($font-family-bukra-bold-italic);
+}
+
+h2,
+.h2 {
+  font-size: $h2-size;
+  @include font-family($font-family-bukra-bold-italic);
+  // @include h2;
+}
+
+h3,
+.h3 {
+  font-size: $h3-size;
+  @include font-family($font-family-bukra-bold-italic);
+}
+
+h4,
+.h4 {
+  font-size: $h4-size;
+  @include font-family($font-family-bukra-bold-italic);
+}
+
+h5,
+.h5 {
+  font-size: $h5-size;
+  @include font-family($font-family-bukra-bold);
+}
+
+h6,
+.h6 {
+  font-size: $h6-size;
+  @include font-family($font-family-bukra-bold);
+}
+
+
+
+.subtitle-1 {
+  font-size: $subtitle1-size;
+  @include font-family($font-family-bukra-bold);
+}
+.subtitle-2 {
+  font-size: $subtitle2-size;
+  @include font-family($font-family-bukra-bold);
+}
+.subtitle-3 {
+  font-size: $subtitle3-size;
+  @include font-family($font-family-bukra-bold);
+}
+
+
+
+.caption-1 {
+  font-size: $caption1-size;
+  @include font-family($font-family-dubai-medium);
+}
+.caption-2 {
+  font-size: $caption2-size;
+  @include font-family($font-family-bukra-regular);
+  
+  &-bold {
+    @include font-family($font-family-bukra-bold);
+  }
+}
+.caption-3 {
+  font-size: $caption3-size;
+  @include font-family($font-family-bukra-regular);
+  
+  &-bold {
+    @include font-family($font-family-bukra-bold);
+  }
+}
+.caption-4 {
+  font-size: $caption4-size;
+  @include font-family($font-family-dubai-regular);
+  
+  &-bold {
+    @include font-family($font-family-dubai-bold);
+  }
+}
+.caption-5 {
+  font-size: $caption5-size;
+  @include font-family($font-family-bukra-regular);
+  
+  &-bold {
+    @include font-family($font-family-bukra-bold);
+  }
+}
+
+
+
+
+
+
+
+
+//[4]  Small
+
+//[4.1]  Size normal
+small,
+.small {
+  // font-size: $small-size;
+}
+
+//[4.2]  Size 2x
+.small-2x {
+  // font-size: $small-size-2x;
+}
+
+//[4.3]  Size 3x
+.small-3x {
+  // font-size: $small-size-3x;
+}
+
+//[5]  Strong & Bold
+strong,
+.bold {
+  // @extend .font-bold;
+}

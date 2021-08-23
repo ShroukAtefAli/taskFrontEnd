@@ -1,0 +1,48 @@
+
+<div class="row justify-content-center" >
+  <div class="col-9" style="margin-top: 5%;">
+    <h1>Shopping Cart</h1>
+
+    <div class="shopping-cart" style="margin-top: 2%;">
+
+      <div class="column-labels">
+        <label class="product-image">Image</label>
+        <label class="product-details">Product</label>
+        <label class="product-price">Price</label>
+        <label class="product-quantity">Quantity</label>
+        <label class="product-removal">Remove</label>
+        <label class="product-line-price">Total</label>
+      </div>
+
+      <div class="product" *ngFor="let prod of products">
+        <div class="product-image">
+          <img [src]="prod.image">
+        </div>
+        <div class="product-details">
+          <div class="product-title">{{prod.title}}</div>
+          <p class="product-description">{{prod.description}}</p>
+        </div>
+        <div class="product-price">{{prod.price}}</div>
+        <div class="product-quantity">
+          <input type="number" disabled [value]="prod.quantity" min="1">
+        </div>
+        <div class="product-removal">
+          <button class="remove-product">
+            Remove
+          </button>
+        </div>
+        <div class="product-line-price">{{prod.linePrice}}</div>
+      </div>
+
+      <!-- <div class="totals">
+        <div class="totals-item totals-item-total">
+          <label>Total</label>
+          <div class="totals-value" id="cart-total">90.57</div>
+        </div>
+      </div> -->
+
+    </div>
+
+  </div>
+</div>
+

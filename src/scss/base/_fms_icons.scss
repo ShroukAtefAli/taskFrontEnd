@@ -1,0 +1,318 @@
+@font-face {
+  font-family: 'fms-icons';
+  src:  url('/assets/fonts/fms-icons.eot?77js3');
+  src:  url('/assets/fonts/fms-icons.eot?77js3#iefix') format('embedded-opentype'),
+    url('/assets/fonts/fms-icons.ttf?77js3') format('truetype'),
+    url('/assets/fonts/fms-icons.woff?77js3') format('woff'),
+    url('/assets/fonts/fms-icons.svg?77js3#fms-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="fms-"], [class*=" fms-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fms-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fms-ellipsis:before {
+  content: "\e957";
+}
+.fms-arrow-left:before {
+  content: "\e955";
+}
+.fms-arrow-right:before {
+  content: "\e956";
+}
+.fms-more:before {
+  content: "\e954";
+}
+.fms-dash:before {
+  content: "\e93a";
+}
+.fms-camera:before {
+  content: "\e952";
+}
+.fms-sort-amount-down-solid:before {
+  content: "\e958";
+}
+.fms-setting-1:before {
+  content: "\e900";
+}
+.fms-fms-warning:before {
+  content: "\e901";
+}
+.fms-wheel:before {
+  content: "\e902";
+}
+.fms-key:before {
+  content: "\e903";
+}
+.fms-fms-forward:before {
+  content: "\e904";
+}
+.fms-user:before {
+  content: "\e905";
+}
+.fms-request:before {
+  content: "\e906";
+}
+.fms-fms-location:before {
+  content: "\e907";
+}
+.fms-calendar:before {
+  content: "\e908";
+}
+.fms-fleet:before {
+  content: "\e909";
+}
+.fms-fms-compact-disc:before {
+  content: "\e90a";
+}
+.fms-copy:before {
+  content: "\e90b";
+}
+.fms-derailleur:before {
+  content: "\e90c";
+}
+.fms-edit:before {
+  content: "\e90d";
+}
+.fms-flag:before {
+  content: "\e90e";
+}
+.fms-gear-2:before {
+  content: "\e90f";
+}
+.fms-burger:before {
+  content: "\e910";
+}
+.fms-menu:before {
+  content: "\e911";
+}
+.fms-down:before {
+  content: "\e912";
+  color: #58585b;
+}
+.fms-arrow-up:before {
+  content: "\e913";
+}
+.fms-headphone:before {
+  content: "\e914";
+  color: #58585b;
+}
+.fms-logo:before {
+  content: "\e915";
+}
+.fms-archived:before {
+  content: "\e916";
+}
+.fms-fms-alarms:before {
+  content: "\e917";
+}
+.fms-engine:before {
+  content: "\e918";
+}
+.fms-visibility .path1:before {
+  content: "\e919";
+  color: rgb(235, 234, 234);
+}
+.fms-visibility .path2:before {
+  content: "\e91a";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.fms-visibility .path3:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.fms-search:before {
+  content: "\e91c";
+}
+.fms-graph:before {
+  content: "\e91d";
+}
+.fms-download:before {
+  content: "\e91e";
+}
+.fms-fleet-line:before {
+  content: "\e91f";
+}
+.fms-filter-asc:before {
+  content: "\e920";
+}
+.fms-business:before {
+  content: "\e921";
+}
+.fms-fms-language:before {
+  content: "\e922";
+}
+.fms-file-line:before {
+  content: "\e923";
+}
+.fms-fms-garanty:before {
+  content: "\e924";
+}
+.fms-car-2:before {
+  content: "\e925";
+}
+.fms-team:before {
+  content: "\e926";
+}
+.fms-fms-template:before {
+  content: "\e927";
+}
+.fms-tire:before {
+  content: "\e928";
+}
+.fms-delete:before {
+  content: "\e929";
+}
+.fms-warranty:before {
+  content: "\e92a";
+}
+.fms-union:before {
+  content: "\e92b";
+}
+.fms-work:before {
+  content: "\e92c";
+}
+.fms-bar-chart:before {
+  content: "\e92d";
+}
+.fms-check:before {
+  content: "\e92e";
+}
+.fms-dollar:before {
+  content: "\e92f";
+}
+.fms-stats:before {
+  content: "\e930";
+}
+.fms-arrow-down-1:before {
+  content: "\e931";
+}
+.fms-asset:before {
+  content: "\e932";
+}
+.fms-car:before {
+  content: "\e933";
+}
+.fms-chart:before {
+  content: "\e934";
+}
+.fms-clock-line:before {
+  content: "\e935";
+}
+.fms-compact-disc:before {
+  content: "\e936";
+}
+.fms-setting-3:before {
+  content: "\e937";
+}
+.fms-forward:before {
+  content: "\e938";
+}
+.fms-gas-pump:before {
+  content: "\e939";
+}
+.fms-integration:before {
+  content: "\e93b";
+}
+.fms-issue:before {
+  content: "\e93c";
+}
+.fms-accessory:before {
+  content: "\e93d";
+}
+.fms-location:before {
+  content: "\e93e";
+}
+.fms-dashboard:before {
+  content: "\e93f";
+}
+.fms-notification:before {
+  content: "\e940";
+}
+.fms-operator:before {
+  content: "\e941";
+}
+.fms-registration:before {
+  content: "\e942";
+}
+.fms-report:before {
+  content: "\e943";
+}
+.fms-requests:before {
+  content: "\e944";
+}
+.fms-salik .path1:before {
+  content: "\e945";
+  color: rgba(0, 0, 0, 0.37);
+}
+.fms-salik .path2:before {
+  content: "\e946";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.fms-salik .path3:before {
+  content: "\e947";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.fms-salik .path4:before {
+  content: "\e948";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.fms-salik .path5:before {
+  content: "\e949";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.fms-salik .path6:before {
+  content: "\e94a";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.fms-salik .path7:before {
+  content: "\e94b";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.fms-salik .path8:before {
+  content: "\e94c";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.fms-salik .path9:before {
+  content: "\e94d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.fms-setting:before {
+  content: "\e94e";
+}
+.fms-store-2:before {
+  content: "\e94f";
+}
+.fms-subasset:before {
+  content: "\e950";
+}
+.fms-traffic-fine:before {
+  content: "\e951";
+}
+.fms-workshop:before {
+  content: "\e953";
+}

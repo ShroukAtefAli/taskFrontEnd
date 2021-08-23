@@ -1,0 +1,13 @@
+// Project Paths
+$path-ng: "assets";
+$path-static: "..";
+
+/*
+Please set the below variable "$project-path" with the following options
+
+Angular Project  >>  $path-ng
+Static Project   >>  $path-static
+*/
+
+ $project-path: $path-ng;
+// $project-path: $path-static;
